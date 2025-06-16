@@ -1,0 +1,201 @@
+:root {
+  --bg-main: #ffffff;           /* white background */
+  --text-main: #000000;         /* black text */
+  --accent: #ffb6c1;            /* pastel pink */
+  --button-bg: #ffffff;         /* white button */
+  --button-hover: #ffb6c1;      /* pastel pink hover */
+  --card-bg-dark: #000000;      /* black cards */
+  --card-text-light: #ffffff;   /* white text in cards */
+}
+
+/* ========== Global ========== */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family:  garamond;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2 h3{
+  color: var(--text-main);
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+button, .project-link {
+  background-color: var(--button-bg);
+  color: var(--text-main);
+  border: 2px solid var(--text-main);
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .project-link:hover {
+  background-color: var(--button-hover);
+  color: var(--text-main);
+}
+
+/* ========== Container ========== */
+.container {
+  background-color: var(--bg-main);
+  padding: 30px 40px;
+  margin: 30px auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== Navigation ========== */
+nav {
+  background-color: #131418;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #ccc;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  background: linear-gradient(135deg, var(--text-main), var(--accent));
+  color: white;
+  padding: 50px 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ========== Skills Section ========== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skill-tag {
+  background-color: var(--button-bg);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: var(--accent);
+  cursor: default;
+}
+
+/* ========== Project Section ========== */
+#projects {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: var(--card-bg-dark);
+  color: var(--card-text-light);
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Certificate Section ========== */
+#certificates {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  padding: 40px 20px;
+}
+
+.cert-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cert-list li {
+  background-color: var(--card-bg-dark);
+  color: var(--card-text-light);
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.cert-list a {
+  color: var(--card-text-light);
+  font-weight: bold;
+}
+
+.cert-list a:hover {
+  text-decoration: bold;
+}
+
+/* ========== Responsive Design ========== */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+  
+
+
